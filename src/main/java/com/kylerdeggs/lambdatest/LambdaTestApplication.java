@@ -20,7 +20,7 @@ public class LambdaTestApplication {
 	}
 
 	@Bean
-	public Function<MessageDto, String> uppercase() {
+	public Function<MessageDto, String> sendMessage() {
 		return value -> {
 			AmazonSNS snsClient = AmazonSNSClient.builder().build();
 			Map<String, MessageAttributeValue> messageAttributes = new HashMap<>();
